@@ -41,6 +41,7 @@
   //
   //
   $(document).ready(function () {
+    $('.bigtext').bigtext();
     // $(document).foundation();
     // console.log("init menu");
     // $("#menu-sign").click(function() {

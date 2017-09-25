@@ -1,0 +1,37 @@
+body {
+  overflow: scroll;
+
+  &.disabled-scroll {
+    overflow: hidden;
+  }
+
+}
+
+
+header.index-page {
+  @extend .row;
+  @extend .expanded;
+  // @include lang-switch;
+  // @include bushes-header;
+  // @include whp-2017-gradient-background;
+  z-index: 1;
+
+  .title-wrapper {
+  }
+
+  h1 {
+    background-image: url("/images/bushes-01-small-web-1920.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+
+    min-height: 100%;
+    @include vertical-center;
+    @extend .columns;
+    @extend .small-12;
+
+    span {
+      color: #4ea3a7;
+      mix-blend-mode: color-dodge;
+    }
+  }
+}

@@ -1,0 +1,117 @@
+//
+//
+// colors
+//
+//
+// $primary-color: darken(blue, 10%);
+
+//
+//
+// mixins
+//
+//
+
+// @mixin lang-switch {
+//   .lang-switch {
+//     transform: translate(2.5vw) rotate(90deg);
+//     display: block;
+//     font-size: 12vw;
+//     line-height: 1;
+//     padding-left: 6vw;
+//     color: $not-jet;
+//     // text-decoration: underline;
+//     top: 0;
+//     right: 0;
+//     position: absolute;
+//     z-index: 2000;
+
+//     @include breakpoint(440) {
+//       font-size: 5vw;
+//     }
+
+
+//     &:hover {
+//       color: $red;
+//       text-shadow: $blue -4px -4px;
+//     }
+//   }
+// }
+
+
+// @mixin whp-2017-gradient-background {
+//   background: linear-gradient(0deg, white, grey);
+// }
+
+@mixin bushes-header {
+  postion: relative;
+
+  position: relative;
+
+  height: 100%;
+  min-height: 100%;
+
+
+  .title {
+    text-align: center;
+    @include vertical-center;
+    width: 100%;
+    min-width: 100%;
+    // perspective: 500px;
+  }
+
+  // h1 {
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+
+  //   // width: 100%;
+  //   color: lighten(grey, 5%);
+  //   // color: linear-gradient(0deg, white, grey);
+  //   font-size: 8vw;
+  //   text-align: center;
+  //   // background: linear-gradient(45deg, white, grey);;
+  //   // -webkit-background-clip: text;
+  //   // -webkit-text-fill-color: transparent;
+  //   transform-origin: 0 0 0;
+  //   transform: rotateY(45deg) rotateZ(10deg) translate(-50%, -50%);
+
+  //   &.large {
+  //     font-size: 12vw;
+  //   }
+
+  //   a {
+  //     color: lighten(grey, 5%);
+
+  //     &:hover {
+  //       text-decoration: underline;
+  //       color: blue;
+  //     }
+  //   }
+  // }
+
+  // .fb-page-link {
+  //   position: absolute;
+  //   right: 0;
+  //   bottom: 0;
+  //   color: lightgray;
+  //   transform: rotatez(180deg);
+  //   margin-right: 3vw;
+  //   font-size: 10vw;
+
+  //   @include breakpoint(medium) {
+  //     margin-right: 2vw;
+  //     font-size: 6vw;
+  //   }
+
+    // @include breakpoint(large) {
+    //   margin-right: 1.5vw;
+    //   font-size: 4vw;
+    // }
+
+    // &:hover {
+    //   color: blue;
+    //   text-decoration: underline;
+    // }
+  // }
+
+}
