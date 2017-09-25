@@ -32,6 +32,12 @@ header.index-page {
     span {
       color: #4ea3a7;
       mix-blend-mode: color-dodge;
+      opacity: 1;
+      transition: opacity 1s;
+
+      &.hidden {
+        opacity: 0;
+      }
     }
   }
 }

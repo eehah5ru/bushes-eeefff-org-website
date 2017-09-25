@@ -41,7 +41,21 @@
   //
   //
   $(document).ready(function () {
-    $('.bigtext').bigtext();
+    setTimeout(
+      function() {
+        $('.bigtext').bigtext();
+      },
+      100
+    );
+
+    setTimeout(
+      function() {
+        $("span.hidden").removeClass("hidden");
+      },
+      100
+    );
+
+
     // $(document).foundation();
     // console.log("init menu");
     // $("#menu-sign").click(function() {
