@@ -1,3 +1,27 @@
+@mixin header-bkg($degs) {
+  background: linear-gradient($degs,
+                              transparentize(#EE7752, 0.7),
+                              transparentize(#E73C7E, 0.7),
+                              transparentize(#23A6D5, 0.7),
+                              transparentize(#23D5AB, 0.7)), url("/images/bushes-01-small-web-1920.jpg");
+}
+@keyframes header-bkg-keyframes {
+  0% {
+    // @include header-bkg(0deg);
+    background-position: 0% 50%, 50% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%, 50% 50%;
+  }
+
+
+  100% {
+    background-position: 0% 50%, 50% 50%;
+  }
+}
+
+
 body {
   overflow: scroll;
 
@@ -20,9 +44,14 @@ header.index-page {
   }
 
   h1 {
-    background-image: url("/images/bushes-01-small-web-1920.jpg");
-    background-size: cover;
-    background-position: 50% 50%;
+    animation-duration: 5s;
+    animation-name: header-bkg-keyframes;
+    animation-iteration-count: infinite;
+    // animation-direction: alternate;
+
+    @include header-bkg(135deg);
+    background-size: 400% 400%, cover;
+    // background-position: 50% 50%;
 
     min-height: 100%;
     @include vertical-center;
@@ -30,6 +59,10 @@ header.index-page {
     @extend .small-12;
 
     span {
+      // background-image: url("/images/bushes-01-small-web-1920.jpg");
+      // background-size: cover;
+      // background-position: 50% 50%;
+
       color: #4ea3a7;
       mix-blend-mode: color-dodge;
       opacity: 1;
