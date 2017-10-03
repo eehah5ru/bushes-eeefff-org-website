@@ -65,6 +65,8 @@ article.index-page {
   header,
   footer,
   section {
+    display: block;
+    max-width: 100%;
     @extend .row;
     @extend .expanded;
     z-index: 1;
