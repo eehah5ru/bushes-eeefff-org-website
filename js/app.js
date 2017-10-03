@@ -47,6 +47,13 @@
       },
       active: function() {
         $('.bigtext').bigtext();
+
+        setTimeout(
+          function() {
+            $(".hidden").removeClass("hidden");
+          },
+          100
+        );
       }
     });
     // setTimeout(
