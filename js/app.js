@@ -41,19 +41,27 @@
   //
   //
   $(document).ready(function () {
-    setTimeout(
-      function() {
+    WebFont.load({
+      custom: {
+        families: ['AsimovXWid', 'Asimov']
+      },
+      active: function() {
         $('.bigtext').bigtext();
-      },
-      500
-    );
+      }
+    });
+    // setTimeout(
+    //   function() {
+    //     $('.bigtext').bigtext();
+    //   },
+    //   500
+    // );
 
-    setTimeout(
-      function() {
-        $(".hidden").removeClass("hidden");
-      },
-      600
-    );
+    // setTimeout(
+    //   function() {
+    //     $(".hidden").removeClass("hidden");
+    //   },
+    //   600
+    // );
 
 
     // $(document).foundation();
