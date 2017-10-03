@@ -45,14 +45,14 @@
       function() {
         $('.bigtext').bigtext();
       },
-      200
+      500
     );
 
     setTimeout(
       function() {
         $("span.hidden").removeClass("hidden");
       },
-      300
+      600
     );
 
 
