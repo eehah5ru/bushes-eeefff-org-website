@@ -50,7 +50,7 @@
 
     setTimeout(
       function() {
-        $("span.hidden").removeClass("hidden");
+        $(".hidden").removeClass("hidden");
       },
       600
     );

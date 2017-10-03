@@ -1,10 +1,24 @@
 @mixin header-bkg($degs) {
   background: linear-gradient($degs,
-                              transparentize(#EE7752, 0.7),
-                              transparentize(#E73C7E, 0.7),
-                              transparentize(#23A6D5, 0.7),
-                              transparentize(#23D5AB, 0.7)), url("/images/bushes-01-small-web-1920.jpg");
+                              transparentize(#EE7752, 0.5),
+                              transparentize(#E73C7E, 0.5),
+                              transparentize(#23A6D5, 0.5),
+                              transparentize(#23D5AB, 0.5)), url("/images/bushes-01-small-web-1920.jpg");
+  background-repeat: no-repeat, repeat;
+  background-size: 200% 200%, cover;
+  background-position: 0% 50%, 80% 50%;
 }
+
+@mixin zero-paddings {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+@mixin zero-margins {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 @keyframes header-bkg-keyframes {
   0% {
     // @include header-bkg(0deg);
@@ -31,38 +45,43 @@ body {
 
 }
 
+article.index-page {
+  will-change: transform;
 
-header.index-page {
-  @extend .row;
-  @extend .expanded;
-  // @include lang-switch;
-  // @include bushes-header;
-  // @include whp-2017-gradient-background;
-  z-index: 1;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  transform: translateZ(0);
 
-  .title-wrapper {
+  // background
+  // animation-duration: 5s;
+  // animation-name: header-bkg-keyframes;
+  // animation-iteration-count: infinite;
+  @include header-bkg(135deg);
+
+  min-height: 100%;
+
+  header,
+  footer,
+  section {
+    @extend .row;
+    @extend .expanded;
+    z-index: 1;
+    @include zero-paddings;
+    @include zero-margins;
   }
 
-  h1 {
-    animation-duration: 5s;
-    animation-name: header-bkg-keyframes;
-    animation-iteration-count: infinite;
-    // animation-direction: alternate;
-
-    @include header-bkg(135deg);
-    background-size: 400% 400%, cover;
-    // background-position: 50% 50%;
-
-    min-height: 100%;
-    @include vertical-center;
+  h1,
+  p {
     @extend .columns;
     @extend .small-12;
+    @include zero-paddings;
+    @include zero-margins;
+  }
 
-    span {
-      // background-image: url("/images/bushes-01-small-web-1920.jpg");
-      // background-size: cover;
-      // background-position: 50% 50%;
-
+  h1,
+  h1 span,
+  p,
+  p span {
       color: #4ea3a7;
       mix-blend-mode: color-dodge;
       opacity: 1;
@@ -71,6 +90,6 @@ header.index-page {
       &.hidden {
         opacity: 0;
       }
-    }
   }
+
 }
