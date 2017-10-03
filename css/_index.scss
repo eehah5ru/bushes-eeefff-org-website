@@ -37,6 +37,7 @@
 
 
 body {
+  max-width: 100%;
   overflow: scroll;
 
   &.disabled-scroll {
@@ -46,6 +47,7 @@ body {
 }
 
 article.index-page {
+  max-width: 100%;
   will-change: transform;
 
   -webkit-transform: translateZ(0);
