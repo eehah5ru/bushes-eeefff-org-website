@@ -133,6 +133,7 @@ rootTpl = "templates/default.slim"
 staticPagesRules =
   do
     indexPage "index.slim"
+    indexPage "map.slim"
     notFoundPage "404.slim"
 
   where
