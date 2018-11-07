@@ -1,0 +1,88 @@
+@mixin mask-position($posX, $posY) {
+    -webkit-mask-position: $posX $posY;
+    mask-position: $posX $posY;
+}
+
+@mixin mask-size($sX, $sY) {
+  mask-size: $sX $sY;
+  -webkit-mask-size: $sX $sY;
+
+}
+
+@mixin cover-mask($url) {
+  mask-image: url($url);
+  mask-clip: border-box; /* Can be changed in the live sample */
+  mask-repeat: no-repeat;
+
+  -webkit-mask-image: url($url);
+  -webkit-mask-clip: border-box; /* Can be changed in the live sample */
+  -webkit-mask-repeat: no-repeat;
+
+  @include mask-size(600%, 600%);
+  @include mask-position(50%, 50%);
+}
+
+@keyframes cover-mask-pos-keys {
+  0% {
+    @include mask-position(50%, 50%);
+    @include mask-size(200%, 200%);
+  }
+
+  25% {
+    @include mask-position(75%, 50%);
+  }
+
+  50% {
+    @include mask-position(75%, 75%);
+    @include mask-size(300%, 300%);
+  }
+
+  75% {
+    @include mask-position(50%, 75%);
+  }
+
+  100% {
+    @include mask-position(50%, 50%);
+    @include mask-size(200%, 200%);
+  }
+}
+
+@keyframes cover-mask-size-keys {
+  0% {
+    @include mask-size(200%, 200%);
+  }
+
+  // 25% {
+  //   @include mask-size(350%, 350%);
+  // }
+
+  50% {
+    @include mask-size(500%, 500%);
+  }
+
+  // 75% {
+  //   @include mask-size(2500%, 250%);
+  // }
+
+  100% {
+    @include mask-size(200%, 200%);
+  }
+}
+
+.map-page {
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+
+    &.top {
+      // animation-duration: 5s;
+      // animation-name: cover-mask-pos-keys;
+      // animation-iteration-count: infinite;
+
+      z-index: 1;
+      @include cover-mask("/images/mask-02.svg");
+    }
+  }
+}
